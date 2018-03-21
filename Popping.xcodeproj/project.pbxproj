@@ -25,6 +25,7 @@
 		1853063C206105A500F6401B /* FoldingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853063B206105A500F6401B /* FoldingViewController.swift */; };
 		1853063E206105B000F6401B /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853063D206105B000F6401B /* ImageViewController.swift */; };
 		18530640206105BB00F6401B /* CustomTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853063F206105BB00F6401B /* CustomTransitionViewController.swift */; };
+		18A24FFA206207D600849D78 /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24FF9206207D600849D78 /* FlatButton.swift */; };
 		1F12E8F7FBAD8ADADC5F016D /* libPods-Popping.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B877DAE671FACB25A505ABF1 /* libPods-Popping.a */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,8 @@
 		1853063B206105A500F6401B /* FoldingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldingViewController.swift; sourceTree = "<group>"; };
 		1853063D206105B000F6401B /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		1853063F206105BB00F6401B /* CustomTransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionViewController.swift; sourceTree = "<group>"; };
+		18A24FF9206207D600849D78 /* FlatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatButton.swift; sourceTree = "<group>"; };
+		18A24FFB20620CF300849D78 /* Popping-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Popping-Bridging-Header.h"; sourceTree = "<group>"; };
 		6CDF8DCDED5DBA3EED03DD43 /* Pods-Popping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Popping.release.xcconfig"; path = "Pods/Target Support Files/Pods-Popping/Pods-Popping.release.xcconfig"; sourceTree = "<group>"; };
 		A3A7244F2FFFF5AC5D5302DC /* Pods-Popping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Popping.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Popping/Pods-Popping.debug.xcconfig"; sourceTree = "<group>"; };
 		B877DAE671FACB25A505ABF1 /* libPods-Popping.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Popping.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,12 +132,14 @@
 				185305F12060FAB600F6401B /* AppDelegate.swift */,
 				185305F32060FAB600F6401B /* ViewController.swift */,
 				1853061F2060FB5E00F6401B /* RootViewController.swift */,
+				18A24FF8206207AB00849D78 /* Views */,
 				1853062C2061022300F6401B /* Cells */,
 				1853062B206101C600F6401B /* ViewController */,
 				185305F52060FAB600F6401B /* Main.storyboard */,
 				185305F82060FAB600F6401B /* Assets.xcassets */,
 				185305FA2060FAB600F6401B /* LaunchScreen.storyboard */,
 				185305FD2060FAB600F6401B /* Info.plist */,
+				18A24FFB20620CF300849D78 /* Popping-Bridging-Header.h */,
 			);
 			path = Popping;
 			sourceTree = "<group>";
@@ -253,6 +258,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		18A24FF8206207AB00849D78 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				18A24FF9206207D600849D78 /* FlatButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		88487540198E0D473F91D81B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +354,7 @@
 				TargetAttributes = {
 					185305ED2060FAB600F6401B = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					185306012060FAB600F6401B = {
@@ -462,6 +476,7 @@
 				185306362061058400F6401B /* ConstraintsViewController.swift in Sources */,
 				185306382061058F00F6401B /* CircleViewController.swift in Sources */,
 				18530640206105BB00F6401B /* CustomTransitionViewController.swift in Sources */,
+				18A24FFA206207D600849D78 /* FlatButton.swift in Sources */,
 				185306322061054900F6401B /* PaperButtonViewController.swift in Sources */,
 				1853063C206105A500F6401B /* FoldingViewController.swift in Sources */,
 				185305F22060FAB600F6401B /* AppDelegate.swift in Sources */,
@@ -637,11 +652,14 @@
 			baseConfigurationReference = A3A7244F2FFFF5AC5D5302DC /* Pods-Popping.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Popping/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = demo.Popping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Popping/Popping-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -652,11 +670,13 @@
 			baseConfigurationReference = 6CDF8DCDED5DBA3EED03DD43 /* Pods-Popping.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Popping/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = demo.Popping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Popping/Popping-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

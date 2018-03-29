@@ -26,7 +26,7 @@
 		1853063E206105B000F6401B /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853063D206105B000F6401B /* ImageViewController.swift */; };
 		18530640206105BB00F6401B /* CustomTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1853063F206105BB00F6401B /* CustomTransitionViewController.swift */; };
 		18A24FFA206207D600849D78 /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A24FF9206207D600849D78 /* FlatButton.swift */; };
-		1F12E8F7FBAD8ADADC5F016D /* libPods-Popping.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B877DAE671FACB25A505ABF1 /* libPods-Popping.a */; };
+		D1C85FAA02D742EC27F5ECB4 /* Pods_Popping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A538EC1F79DD2D95149EEB3A /* Pods_Popping.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +75,7 @@
 		18A24FFB20620CF300849D78 /* Popping-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Popping-Bridging-Header.h"; sourceTree = "<group>"; };
 		6CDF8DCDED5DBA3EED03DD43 /* Pods-Popping.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Popping.release.xcconfig"; path = "Pods/Target Support Files/Pods-Popping/Pods-Popping.release.xcconfig"; sourceTree = "<group>"; };
 		A3A7244F2FFFF5AC5D5302DC /* Pods-Popping.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Popping.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Popping/Pods-Popping.debug.xcconfig"; sourceTree = "<group>"; };
-		B877DAE671FACB25A505ABF1 /* libPods-Popping.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Popping.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A538EC1F79DD2D95149EEB3A /* Pods_Popping.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Popping.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F12E8F7FBAD8ADADC5F016D /* libPods-Popping.a in Frameworks */,
+				D1C85FAA02D742EC27F5ECB4 /* Pods_Popping.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +269,7 @@
 		88487540198E0D473F91D81B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B877DAE671FACB25A505ABF1 /* libPods-Popping.a */,
+				A538EC1F79DD2D95149EEB3A /* Pods_Popping.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -423,9 +423,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Popping/Pods-Popping-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

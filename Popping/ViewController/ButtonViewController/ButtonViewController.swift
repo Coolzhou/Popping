@@ -21,6 +21,11 @@ class ButtonViewController: UIViewController {
         
         let flatBtn:UIButton = FlatButton.init(frame: CGRect.zero)
         view.addSubview(flatBtn)
+        flatBtn.snp.makeConstraints { (make) in
+            make.size.equalTo(CGSize.init(width: 100, height: 44))
+            make.center.equalToSuperview()
+        }
+        flatBtn.backgroundColor = UIColor.orange
         
     
         

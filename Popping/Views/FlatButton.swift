@@ -39,27 +39,28 @@ class FlatButton: UIButton {
     
     @objc func scaleToSmall() {
         
-        let scaleSmall:POPBasicAnimation = POPBasicAnimation.pop_animation(forKey: kPOPLayerScaleXY) as! POPBasicAnimation
-        scaleSmall.toValue = NSValue.init(cgSize: CGSize.init(width: 0.8, height: 0.8))
-        layer.pop_add(scaleSmall, forKey: "layerScaleSmallAnimation")
-        
+        if let anim1 = POPBasicAnimation(propertyNamed: kPOPLayerScaleXY) {
+            anim1.toValue = NSValue.init(cgSize: CGSize.init(width: 0.8, height: 0.8))
+            layer.pop_add(anim1, forKey: "layerScaleSmallAnimation")
+        }
     }
     
     @objc func scaleAnimation() {
         
-        let scaleAnimation:POPSpringAnimation = POPSpringAnimation.pop_animation(forKey: kPOPLayerScaleXY) as! POPSpringAnimation
-        scaleAnimation.velocity = NSValue.init(cgSize: CGSize.init(width: 3.0, height: 3.0))
-        scaleAnimation.toValue = NSValue.init(cgSize: CGSize.init(width: 1.0, height: 1.0))
-        scaleAnimation.springBounciness = 18.0
-        layer.pop_add(scaleAnimation, forKey: "layerScaleAnimation")
-        
-        
+        if let scaleAnimation = POPSpringAnimation(propertyNamed:kPOPLayerScaleXY ) {
+            scaleAnimation.velocity = NSValue.init(cgSize: CGSize.init(width: 3.0, height: 3.0))
+            scaleAnimation.toValue = NSValue.init(cgSize: CGSize.init(width: 1.0, height: 1.0))
+            scaleAnimation.springBounciness = 18.0
+            layer.pop_add(scaleAnimation, forKey: "layerScaleAnimation")
+        }
     }
     
     @objc func scaleToDefault() {
-        let scaleSmall:POPBasicAnimation = POPBasicAnimation.pop_animation(forKey: kPOPLayerScaleXY) as! POPBasicAnimation
-        scaleSmall.toValue = NSValue.init(cgSize: CGSize.init(width: 1.0, height: 1.0))
-        layer.pop_add(scaleSmall, forKey: "layerScaleSmallAnimation")
+
+        if let scaleSmall = POPBasicAnimation(propertyNamed: kPOPLayerScaleXY) {
+            scaleSmall.toValue = NSValue.init(cgSize: CGSize.init(width: 1.0, height: 1.0))
+            layer.pop_add(scaleSmall, forKey: "layerScaleSmallAnimation")
+        }
     }
 
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183AAF1220735F9B0047DD47 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183AAF1120735F9B0047DD47 /* Comment.swift */; };
+		183AAF14207362BC0047DD47 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183AAF13207362BC0047DD47 /* CircleView.swift */; };
 		185305F22060FAB600F6401B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185305F12060FAB600F6401B /* AppDelegate.swift */; };
 		185305F42060FAB600F6401B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185305F32060FAB600F6401B /* ViewController.swift */; };
 		185305F72060FAB600F6401B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185305F52060FAB600F6401B /* Main.storyboard */; };
@@ -47,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		183AAF1120735F9B0047DD47 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		183AAF13207362BC0047DD47 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		185305EE2060FAB600F6401B /* Popping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Popping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185305F12060FAB600F6401B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		185305F32060FAB600F6401B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 			children = (
 				185305F12060FAB600F6401B /* AppDelegate.swift */,
 				185305F32060FAB600F6401B /* ViewController.swift */,
+				183AAF1120735F9B0047DD47 /* Comment.swift */,
 				1853061F2060FB5E00F6401B /* RootViewController.swift */,
 				18A24FF8206207AB00849D78 /* Views */,
 				1853062C2061022300F6401B /* Cells */,
@@ -263,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				18A24FF9206207D600849D78 /* FlatButton.swift */,
+				183AAF13207362BC0047DD47 /* CircleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -487,8 +493,10 @@
 				185306322061054900F6401B /* PaperButtonViewController.swift in Sources */,
 				1853063C206105A500F6401B /* FoldingViewController.swift in Sources */,
 				185305F22060FAB600F6401B /* AppDelegate.swift in Sources */,
+				183AAF14207362BC0047DD47 /* CircleView.swift in Sources */,
 				185306342061057100F6401B /* PasswordViewController.swift in Sources */,
 				1853062E2061024300F6401B /* MenuTableViewCell.swift in Sources */,
+				183AAF1220735F9B0047DD47 /* Comment.swift in Sources */,
 				1853063A2061059900F6401B /* DecayViewController.swift in Sources */,
 				185306302061053800F6401B /* ButtonViewController.swift in Sources */,
 				1853063E206105B000F6401B /* ImageViewController.swift in Sources */,

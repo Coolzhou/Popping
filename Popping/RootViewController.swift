@@ -12,12 +12,12 @@ class RootViewController: UITableViewController {
     
     var items = [["Button Animation",ButtonViewController()],
                  ["Decay Animation",DecayViewController()],
-                 ["Circle Animation",DecayViewController()],
-                 ["Image Animation",DecayViewController()],
-                 ["Custom Transition",DecayViewController()],
-                 ["Paper Button Animation",DecayViewController()],
-                 ["Folding Animation",DecayViewController()],
-                 ["Password Indicator Animation",DecayViewController()],
+                 ["Circle Animation",CircleViewController()],
+                 ["Image Animation",ImageViewController()],
+                 ["Custom Transition",CustomTransitionViewController()],
+                 ["Paper Button Animation",PaperButtonViewController()],
+                 ["Folding Animation",FoldingViewController()],
+                 ["Password Indicator Animation",PasswordViewController()],
                  ["Constraints Animation",ConstraintsViewController()]]
     
 

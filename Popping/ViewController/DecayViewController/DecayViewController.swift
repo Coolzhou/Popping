@@ -12,11 +12,8 @@ class DecayViewController: UIViewController, POPAnimationDelegate{
     
     var dragView: UIControl?
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
         addDragView()
     }
     
@@ -27,11 +24,11 @@ class DecayViewController: UIViewController, POPAnimationDelegate{
         dragView?.layer.masksToBounds = true
         dragView?.center = view.center
         dragView?.backgroundColor = UIColor.init(red: 52/255.0, green: 152/255.0, blue: 219/255.0, alpha: 1)
-        dragView?.addTarget(self, action: #selector(touchDown), for: UIControlEvents.touchUpInside)
+        dragView?.addTarget(self, action: #selector(touchDown(sender:)), for: UIControlEvents.touchUpInside)
         
         view.addSubview(dragView!)
         
-        let pan = UIPanGestureRecognizer.init(target: self, action: #selector(handlePan))
+        let pan = UIPanGestureRecognizer.init(target: self, action: #selector(handlePan(pan:)))
         dragView?.addGestureRecognizer(pan)
         
     }
@@ -47,7 +44,6 @@ class DecayViewController: UIViewController, POPAnimationDelegate{
         pan.setTranslation(CGPoint(x: 0, y: 0), in: self.view)
         
         if pan.state == .ended {
-            
             let velocity = pan.velocity(in: self.view)
             if let anim1 = POPDecayAnimation(propertyNamed: kPOPLayerPosition) {
                 anim1.delegate = self
@@ -57,8 +53,19 @@ class DecayViewController: UIViewController, POPAnimationDelegate{
         }
     }
     
+    //POPAnimationDelegate
     func pop_animationDidApply(_ anim: POPAnimation!) {
-        
+        let anim = anim as! POPDecayAnimation
+        let isDragViewOutsideOfSuperView = self.view.frame.contains((dragView?.frame)!)
+
+        if isDragViewOutsideOfSuperView == false {
+
+            if let anima = POPSpringAnimation(propertyNamed: kPOPLayerPosition){
+                anima.velocity = anim.velocity
+                anima.toValue =  NSValue.init(cgPoint: view.center)
+                dragView?.layer.pop_add(anima, forKey: "layerPositionAnimation")
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
